@@ -5,28 +5,27 @@ var numeriDaUnoACento = [];
 for (i = 0; i < 100; i++) {
     numero = i + 1;
     numeriDaUnoACento.push(numero);
-}
-
-console.log(numeriDaUnoACento);
-
-
-for (i = 0; i < numeriDaUnoACento.length; i++) {
 
 
     var multiploDiTre = numeriDaUnoACento[i] % 3 === 0;
     var multiploDiCinque = numeriDaUnoACento[i] % 5 === 0 ;
 
     if (multiploDiTre && !multiploDiCinque) {
-        numeriDaUnoACento.splice(i, 1, "Fizz");
+        numeriDaUnoACento[i]= ("Fizz");
+        // numeriDaUnoACento.splice(i, 1, "Fizz");
 
     } else if (multiploDiCinque && !multiploDiTre) {
-        numeriDaUnoACento.splice(i, 1, "Buzz");
+        numeriDaUnoACento[i]= ("Buzz");
+        // numeriDaUnoACento.splice(i, 1, "Buzz");
 
     } else if (multiploDiTre && multiploDiCinque) {
-        numeriDaUnoACento.splice(i, 1, "FizzBuzz");
+        numeriDaUnoACento[i]= ("FizzBuzz");
+        // numeriDaUnoACento.splice(i, 1, "FizzBuzz");
 
     } else { };
-}
+
+};
+
 
 console.log(numeriDaUnoACento);
 
