@@ -9,20 +9,20 @@ for (i = 0; i < 100; i++) {
 
 console.log(numeriDaUnoACento);
 
-multiploDiTre = 0;
-multiploDiCinque = 0;
 
 for (i = 0; i < numeriDaUnoACento.length; i++) {
 
 
+    var multiploDiTre = numeriDaUnoACento[i] % 3 === 0;
+    var multiploDiCinque = numeriDaUnoACento[i] % 5 === 0 ;
 
-    if (numeriDaUnoACento[i] % 3 === 0 && numeriDaUnoACento[i] % 5 !== 0) {
+    if (multiploDiTre && !multiploDiCinque) {
         numeriDaUnoACento.splice(i, 1, "Fizz");
 
-    } else if (numeriDaUnoACento[i] % 5 === 0 && numeriDaUnoACento[i] % 3 !== 0) {
+    } else if (multiploDiCinque && !multiploDiTre) {
         numeriDaUnoACento.splice(i, 1, "Buzz");
 
-    } else if (numeriDaUnoACento[i] % 3 === 0 && numeriDaUnoACento[i] % 5 === 0) {
+    } else if (multiploDiTre && multiploDiCinque) {
         numeriDaUnoACento.splice(i, 1, "FizzBuzz");
 
     } else { };
